@@ -28,7 +28,7 @@ namespace Route.C41.G03.PL
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<ApplicationDbContext>(Options => { Options.UseSqlServer("Server=.; Database=MVCApplication;Trusted_connection=True;MultipleActiveResultSets=Ture")});
+            services.AddDbContext<ApplicationDbContext>(Options => { Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
