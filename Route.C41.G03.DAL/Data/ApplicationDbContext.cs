@@ -12,7 +12,7 @@ namespace Route.C41.G03.DAL.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options):base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //=> optionsBuilder.UseSqlServer("Server=.; Database=MVCApplication;Trusted_connection=True;MultipleActiveResultSets=Ture");
