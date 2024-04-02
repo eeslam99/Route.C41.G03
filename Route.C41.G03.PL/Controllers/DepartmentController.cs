@@ -18,5 +18,19 @@ namespace Route.C41.G03.PL.Controllers
             var departments = _departmentRepo.GetAll();
             return View(departments);
         }
+
+        [HttpGet]
+        public IActionResult Details(int?id)
+        {
+            if (!id.HasValue)
+                return BadRequest();
+            var department = _departmentRepo.Get(id.Value);
+            
+            if (department == null)
+                return NotFound();
+
+            return View(department);
+
+        }
     }
 }
