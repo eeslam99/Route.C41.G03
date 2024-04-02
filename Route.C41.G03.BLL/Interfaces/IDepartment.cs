@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Route.C41.G03.BLL.Interfaces
 {
-    public interface IDepartmentRepository
+    public interface IDepartment
     {
         IEnumerable<Department> GetAll();
-
         Department Get(Department id);
         int Add(Department entity);
         int Update(Department entity);

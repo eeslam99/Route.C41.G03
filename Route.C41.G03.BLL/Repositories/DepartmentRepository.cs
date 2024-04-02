@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Route.C41.G03.BLL.Repositories
 {
-    public class DepartmentRepository : IDepartmentRepository
+    public class DepartmentRepository : IDepartment
     { 
         private readonly ApplicationDbContext _dbContext;
 

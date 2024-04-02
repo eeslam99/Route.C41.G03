@@ -14,7 +14,7 @@ namespace Route.C41.G03.DAL.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "10, 10"),
                     Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    code = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    Code = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     DateOfCreation = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
