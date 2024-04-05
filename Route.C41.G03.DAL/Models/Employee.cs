@@ -30,7 +30,7 @@ namespace Route.C41.G03.DAL.Models
         [Phone]
         public string PhoneNumber { get; set; }
         public DateTime HireDate { get; set; }
-        public DateTime CreateDate { get; set;}=DateTime.Now;
+        public DateTime CreateDate { get; set;} = DateTime.Now;
 
     }
 }
