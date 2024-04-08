@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,14 @@ namespace Route.C41.G03.DAL.Models
         [Phone]
         public string PhoneNumber { get; set; }
         public DateTime HireDate { get; set; }
-        public DateTime CreateDate { get; set;} = DateTime.Now;
+        public DateTime CreateDate { get; set; } = DateTime.Now;
 
+        [ForeignKey("DepartmentId")]
+        public int? DepartmentId { get; set; }
+
+        // Corrected InverseProperty attribute
+        [InverseProperty("Employees")]
+        public Department Department { get; set; }
     }
+
 }
